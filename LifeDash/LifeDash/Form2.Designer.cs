@@ -101,7 +101,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.BackColor = System.Drawing.Color.DeepPink;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(153, 355);
@@ -110,10 +110,11 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Log In";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.BackColor = System.Drawing.Color.DeepPink;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(153, 239);
@@ -122,6 +123,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
