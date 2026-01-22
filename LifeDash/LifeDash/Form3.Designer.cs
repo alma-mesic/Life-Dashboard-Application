@@ -37,6 +37,7 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
@@ -55,7 +56,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,21 +77,22 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.homeToolStripMenuItem.Text = "Home";
             // 
             // dailyMissionsToolStripMenuItem
             // 
             this.dailyMissionsToolStripMenuItem.Name = "dailyMissionsToolStripMenuItem";
-            this.dailyMissionsToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
+            this.dailyMissionsToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.dailyMissionsToolStripMenuItem.Text = "Missions";
             this.dailyMissionsToolStripMenuItem.Click += new System.EventHandler(this.dailyMissionsToolStripMenuItem_Click);
             // 
             // shopToolStripMenuItem
             // 
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(57, 26);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.shopToolStripMenuItem.Text = "Shop";
+            this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
@@ -100,14 +101,15 @@
             this.logOutToolStripMenuItem,
             this.deleteAccountToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -116,6 +118,14 @@
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logOutToolStripMenuItem.Text = "Log out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // deleteAccountToolStripMenuItem
+            // 
+            this.deleteAccountToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
+            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deleteAccountToolStripMenuItem.Text = "Exit Application";
+            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
             // 
             // progressBar1
             // 
@@ -268,6 +278,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "Scroll TikTok";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -289,12 +300,15 @@
             this.imageList1.Images.SetKeyName(0, "teddy-bear-happy.png");
             this.imageList1.Images.SetKeyName(1, "teddy-bear-stressed.png");
             this.imageList1.Images.SetKeyName(2, "teddy-bear-tired.png");
-            this.imageList1.Images.SetKeyName(3, "koala-happy.png");
-            this.imageList1.Images.SetKeyName(4, "koala-stressed.png");
-            this.imageList1.Images.SetKeyName(5, "koala-tired.png");
-            this.imageList1.Images.SetKeyName(6, "rabbit-happy.png");
-            this.imageList1.Images.SetKeyName(7, "rabbit-stressed.png");
-            this.imageList1.Images.SetKeyName(8, "rabbit-tired.png");
+            this.imageList1.Images.SetKeyName(3, "teddy-bear-sad.png");
+            this.imageList1.Images.SetKeyName(4, "koala-happy.png");
+            this.imageList1.Images.SetKeyName(5, "koala-stressed.png");
+            this.imageList1.Images.SetKeyName(6, "koala-tired.png");
+            this.imageList1.Images.SetKeyName(7, "koala-sad.png");
+            this.imageList1.Images.SetKeyName(8, "rabbit-happy.png");
+            this.imageList1.Images.SetKeyName(9, "rabbit-stressed.png");
+            this.imageList1.Images.SetKeyName(10, "rabbit-tired.png");
+            this.imageList1.Images.SetKeyName(11, "rabbit-sad.png");
             // 
             // pictureBox1
             // 
@@ -303,13 +317,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(186, 171);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            // 
-            // deleteAccountToolStripMenuItem
-            // 
-            this.deleteAccountToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
-            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.deleteAccountToolStripMenuItem.Text = "Delete account";
             // 
             // Form3
             // 

@@ -11,6 +11,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
 using System.Security.Permissions;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace LifeDash
 {
@@ -29,51 +31,102 @@ namespace LifeDash
         int stress = 25;
         int happiness = 75;
 
-        int i, j, k;
+        int i, j, k, p;
 
-        void progress(int energy, int focus, int stress, int happiness)
+        int provjera (int value) //making sure the values dont go over the limit
+        {
+            if (value < 0) value = 0;
+            if (value > 100) value = 100;
+
+            return value;
+        }
+        void progress(int energy, int focus, int stress, int happiness) //connecting emotions and progress bar
         {
             progressBar1.Value = energy;
             progressBar2.Value = focus;
             progressBar3.Value = stress;
             progressBar4.Value = happiness;
-        }
 
-        void state(int energy, int focus, int stress, int happiness, int i, int j, int k)
-        {
-            if (energy < 20)
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
+            button6.Enabled = true;
+
+           
+            if (progressBar1.Value == 0 || progressBar2.Value == 0)
             {
-                pictureBox1.Image = imageList1.Images[k];
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button5.Enabled = false;
+            }
+            if (progressBar3.Value == 100)
+            {
+                button3.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+            }
+            if (progressBar4.Value == 0)
+            {
+                button1.Enabled = false;
+                button5.Enabled = false;
+            }
+        }
+        
+
+        void state(int energy, int focus, int stress, int happiness, int i, int j, int k, int p) //seting photo by emotions
+        {
+            if (stress >= 75)
+            {
+                pictureBox1.Image = imageList1.Images[j]; // stressed
+            }
+            else if (energy <= 20)
+            {
+                pictureBox1.Image = imageList1.Images[k]; // sleepy
+            }
+            else if (happiness < 20)
+            {
+                pictureBox1.Image = imageList1.Images[p]; // sad
+            }
+            else
+            {
+                pictureBox1.Image = imageList1.Images[i]; // happy
             }
 
         }
         private void dailyMissionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Missions missions = new Missions();
+            missions.Show();
+            this.Hide();
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            if(Form1.avatar == "Koala")//3 4 5
+            if(Form1.avatar == "Koala")// 4 5 6 7
             {
-                pictureBox1.Image = imageList1.Images[3];
-                i = 3;
-                j = 4;
-                k = 5;
+                pictureBox1.Image = imageList1.Images[4];
+                i = 4;
+                j = 5;
+                k = 6;
+                p = 7;
             }
-            else if(Form1.avatar== "Teddy-bear")// 0 1 2
+            else if(Form1.avatar== "Teddy-bear")// 0 1 2 3
             {
                 pictureBox1.Image= imageList1.Images[0];
                 i = 0;
                 j = 1;
                 k = 2;
+                p = 3;
             }
-            else // 6 7 8
+            else if (Form1.avatar == "Bunny") // 8 9 10 11
             {
-                pictureBox1.Image=imageList1.Images[6];
-                i = 6;
-                j = 7;
-                k = 8;
+                pictureBox1.Image=imageList1.Images[8];
+                i = 8;
+                j = 9;
+                k = 10;
+                p = 11;
             }
             progressBar1.Maximum = 100;
             progressBar2.Maximum = 100;
@@ -84,6 +137,8 @@ namespace LifeDash
 
             label5.Text = "Score: " + score.ToString();
             label6.Text = "Coins: " + coins.ToString();
+
+            state(energy, focus, stress, happiness, i, j, k, p);
 
         }
 
@@ -97,26 +152,59 @@ namespace LifeDash
 
         }
 
+        private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Settings profile = new Settings();
+            profile.Show();
+            this.Hide();
+        }
+
+        private void shopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Shop shop = new Shop();
+            shop.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //study
         {
             MessageBox.Show("Studying for upcoming test...","Study",MessageBoxButtons.OKCancel,MessageBoxIcon.Information);
 
-            energy -= 15;
+            /*energy -= 15;
             focus += 10;
             stress -= 10;
             happiness -= 15;
-            if (energy < 0) energy = 0;
-            if (stress < 0) stress = 0;
-            if (happiness < 0) happiness = 0;
-            if (focus < 0) focus = 0;
 
+            energy = provjera(energy);
+            focus = provjera(focus);
+            stress = provjera(stress);
+            happiness = provjera(happiness);*/
+            stress = 90;
+            state(energy, focus, stress, happiness, i, j, k, p);
             progress(energy, focus, stress, happiness);
-            state(energy,focus,stress,happiness,i,j,k);
+
+            score += 20;
+            coins += 5;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

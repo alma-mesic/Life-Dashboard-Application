@@ -48,8 +48,16 @@ namespace LifeDash
             string username = textBox1.Text;
             string password = textBox2.Text;
             string birthday = dateTimePicker1.Value.ToShortDateString();
-            string avatar = comboBox1.SelectedItem.ToString();
-            string gen="";
+            string avatar = "";
+            if (comboBox1.SelectedItem != null)
+            {
+                avatar = comboBox1.SelectedItem.ToString();
+            }
+            else
+            {
+                avatar = null;
+            }
+            string gen = "";
             if (radioButton1.Checked)
             {
                 gen = "Male";
@@ -59,9 +67,9 @@ namespace LifeDash
                 gen = "Female";
             }
             
-            if(username=="" || password=="" || birthday=="" || gen == "" || avatar=="")
+            if(username=="" || password=="" || birthday=="" || gen == "" || avatar==null)
             {
-                MessageBox.Show("Please fill all fields!");
+                MessageBox.Show("Please fill all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

@@ -45,34 +45,43 @@ namespace LifeDash
         private void button1_Click(object sender, EventArgs e)
         {
             string username = textBox1.Text;
-            string password = textBox2.Text;   
-
-            StreamReader sr = new StreamReader("korisnik.txt");
-            string line;
-            bool nasao = false;
-
-            while (!sr.EndOfStream)
+            string password = textBox2.Text;  
+            
+            if(username=="" || password == "")
             {
-                line = sr.ReadLine();
-                string[] podaci = line.Split('|');
-                if (podaci[0]==username && podaci[1] == password)
-                {
-                    
-                    nasao = true;
-                    break;
-                }
-            }
-
-            sr.Close();
-            if (nasao) {
-                Form3 home = new Form3();
-                home.Show();
-                this.Hide();
+                MessageBox.Show("Error!\nYou must enter username and password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Wrong username or password");
+                StreamReader sr = new StreamReader("korisnik.txt");
+                string line;
+                bool nasao = false;
+
+                while (!sr.EndOfStream)
+                {
+                    line = sr.ReadLine();
+                    string[] podaci = line.Split('|');
+                    if (podaci[0] == username && podaci[1] == password)
+                    {
+
+                        nasao = true;
+                        break;
+                    }
+                }
+
+                sr.Close();
+                if (nasao)
+                {
+                    Form3 home = new Form3();
+                    home.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong username or password");
+                }
             }
+ 
         }
     }
 }
