@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyMissionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +53,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +70,7 @@
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(812, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(812, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,7 +97,8 @@
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.profileToolStripMenuItem,
-            this.logOutToolStripMenuItem});
+            this.logOutToolStripMenuItem,
+            this.deleteAccountToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.settingsToolStripMenuItem.Text = "Settings";
@@ -101,18 +106,20 @@
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
             this.profileToolStripMenuItem.Text = "Profile";
             // 
             // logOutToolStripMenuItem
             // 
-            this.logOutToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.logOutToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // progressBar1
             // 
+            this.progressBar1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.progressBar1.Location = new System.Drawing.Point(40, 276);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(279, 19);
@@ -201,83 +208,108 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
+            this.button1.BackColor = System.Drawing.Color.DeepPink;
             this.button1.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(449, 289);
+            this.button1.Location = new System.Drawing.Point(438, 289);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 48);
+            this.button1.Size = new System.Drawing.Size(150, 48);
             this.button1.TabIndex = 12;
             this.button1.Text = "Study";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Navy;
+            this.button2.BackColor = System.Drawing.Color.DeepPink;
             this.button2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(449, 352);
+            this.button2.Location = new System.Drawing.Point(438, 352);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 48);
+            this.button2.Size = new System.Drawing.Size(150, 48);
             this.button2.TabIndex = 13;
             this.button2.Text = "Train";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Navy;
+            this.button3.BackColor = System.Drawing.Color.DeepPink;
             this.button3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(449, 420);
+            this.button3.Location = new System.Drawing.Point(438, 420);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 48);
+            this.button3.Size = new System.Drawing.Size(150, 48);
             this.button3.TabIndex = 14;
             this.button3.Text = "Sleep";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Navy;
+            this.button4.BackColor = System.Drawing.Color.DeepPink;
             this.button4.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(612, 289);
+            this.button4.Location = new System.Drawing.Point(614, 289);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 48);
+            this.button4.Size = new System.Drawing.Size(150, 48);
             this.button4.TabIndex = 15;
             this.button4.Text = "Eat";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Navy;
+            this.button5.BackColor = System.Drawing.Color.DeepPink;
             this.button5.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(612, 352);
+            this.button5.Location = new System.Drawing.Point(614, 352);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(139, 48);
+            this.button5.Size = new System.Drawing.Size(150, 48);
             this.button5.TabIndex = 16;
             this.button5.Text = "Scroll TikTok";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Navy;
+            this.button6.BackColor = System.Drawing.Color.DeepPink;
             this.button6.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(612, 420);
+            this.button6.Location = new System.Drawing.Point(614, 422);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 48);
+            this.button6.Size = new System.Drawing.Size(150, 48);
             this.button6.TabIndex = 17;
             this.button6.Text = "Do Nothing";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "teddy-bear-happy.png");
+            this.imageList1.Images.SetKeyName(1, "teddy-bear-stressed.png");
+            this.imageList1.Images.SetKeyName(2, "teddy-bear-tired.png");
+            this.imageList1.Images.SetKeyName(3, "koala-happy.png");
+            this.imageList1.Images.SetKeyName(4, "koala-stressed.png");
+            this.imageList1.Images.SetKeyName(5, "koala-tired.png");
+            this.imageList1.Images.SetKeyName(6, "rabbit-happy.png");
+            this.imageList1.Images.SetKeyName(7, "rabbit-stressed.png");
+            this.imageList1.Images.SetKeyName(8, "rabbit-tired.png");
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(304, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(296, 58);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(198, 183);
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.Size = new System.Drawing.Size(186, 171);
+            this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            // 
+            // deleteAccountToolStripMenuItem
+            // 
+            this.deleteAccountToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
+            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deleteAccountToolStripMenuItem.Text = "Delete account";
             // 
             // Form3
             // 
@@ -285,6 +317,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(812, 530);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -301,10 +334,10 @@
             this.Controls.Add(this.progressBar3);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -322,7 +355,6 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.ProgressBar progressBar3;
@@ -339,5 +371,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
     }
 }

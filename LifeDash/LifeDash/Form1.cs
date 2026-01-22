@@ -18,6 +18,7 @@ namespace LifeDash
             InitializeComponent();
         }
 
+        public static string avatar = "";
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked) {
@@ -56,6 +57,7 @@ namespace LifeDash
                 string[] podaci = line.Split('|');
                 if (podaci[0]==username && podaci[1] == password)
                 {
+                    
                     nasao = true;
                     break;
                 }
@@ -63,7 +65,6 @@ namespace LifeDash
 
             sr.Close();
             if (nasao) {
-                MessageBox.Show("Login successful!");
                 Form3 home = new Form3();
                 home.Show();
                 this.Hide();

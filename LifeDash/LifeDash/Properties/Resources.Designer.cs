@@ -89,5 +89,15 @@ namespace LifeDash.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teddy_bear_happy {
+            get {
+                object obj = ResourceManager.GetObject("teddy-bear-happy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -48,6 +48,7 @@ namespace LifeDash
             string username = textBox1.Text;
             string password = textBox2.Text;
             string birthday = dateTimePicker1.Value.ToShortDateString();
+            string avatar = comboBox1.SelectedItem.ToString();
             string gen="";
             if (radioButton1.Checked)
             {
@@ -58,14 +59,14 @@ namespace LifeDash
                 gen = "Female";
             }
             
-            if(username=="" || password=="" || birthday=="" || gen == "")
+            if(username=="" || password=="" || birthday=="" || gen == "" || avatar=="")
             {
                 MessageBox.Show("Please fill all fields!");
             }
             else
             {
                 StreamWriter sw = new StreamWriter("korisnik.txt", true);
-                sw.WriteLine(username + "|" + password + "|" + birthday + "|" + gen + "\n");
+                sw.WriteLine(username + "|" + password + "|" + birthday + "|" + gen + "|" + avatar + "\n");
                 sw.Close();
 
                 MessageBox.Show("Account created!");
