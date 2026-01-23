@@ -16,5 +16,17 @@ namespace LifeDash
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e) //go back button
+        {
+            Form3 home = new Form3();
+            home.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -99,5 +99,9 @@ namespace LifeDash
             MessageBox.Show("You successfully compleated the task:\n"+task + "!", "Task completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
