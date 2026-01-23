@@ -137,5 +137,38 @@
   <ItemGroup>
     <None Include="Resources\teddy-bear-happy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koala-happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koala-sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koala-stressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\koala-tired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit-happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit-sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit-stressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabbit-tired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teddy-bear-sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teddy-bear-stressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teddy-bear-tired.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,7 +17,7 @@ namespace LifeDash
         {
             InitializeComponent();
         }
-
+        public static string avatar = "";
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -48,14 +48,14 @@ namespace LifeDash
             string username = textBox1.Text;
             string password = textBox2.Text;
             string birthday = dateTimePicker1.Value.ToShortDateString();
-            string avatar = "";
             if (comboBox1.SelectedItem != null)
             {
                 avatar = comboBox1.SelectedItem.ToString();
             }
             else
             {
-                avatar = null;
+                MessageBox.Show("Please select an avatar!");
+                return;
             }
             string gen = "";
             if (radioButton1.Checked)
@@ -74,12 +74,12 @@ namespace LifeDash
             else
             {
                 StreamWriter sw = new StreamWriter("korisnik.txt", true);
-                sw.WriteLine(username + "|" + password + "|" + birthday + "|" + gen + "|" + avatar + "\n");
+                sw.WriteLine(username + "|" + password + "|" + birthday + "|" + gen + "|" + avatar);
                 sw.Close();
 
                 MessageBox.Show("Account created!");
 
-                Form3 home = new Form3();
+                Form3 home = new Form3(avatar);
                 home.Show();
                 this.Hide();
 

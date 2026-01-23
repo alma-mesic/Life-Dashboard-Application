@@ -63,7 +63,7 @@ namespace LifeDash
                     string[] podaci = line.Split('|');
                     if (podaci[0] == username && podaci[1] == password)
                     {
-
+                        avatar = podaci[4];
                         nasao = true;
                         break;
                     }
@@ -72,7 +72,7 @@ namespace LifeDash
                 sr.Close();
                 if (nasao)
                 {
-                    Form3 home = new Form3();
+                    Form3 home = new Form3(avatar);
                     home.Show();
                     this.Hide();
                 }
