@@ -75,27 +75,27 @@
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(812, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(812, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.homeToolStripMenuItem.Text = "Home";
             // 
             // dailyMissionsToolStripMenuItem
             // 
             this.dailyMissionsToolStripMenuItem.Name = "dailyMissionsToolStripMenuItem";
-            this.dailyMissionsToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.dailyMissionsToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.dailyMissionsToolStripMenuItem.Text = "Missions";
             this.dailyMissionsToolStripMenuItem.Click += new System.EventHandler(this.dailyMissionsToolStripMenuItem_Click);
             // 
             // shopToolStripMenuItem
             // 
             this.shopToolStripMenuItem.Name = "shopToolStripMenuItem";
-            this.shopToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.shopToolStripMenuItem.Size = new System.Drawing.Size(57, 26);
             this.shopToolStripMenuItem.Text = "Shop";
             this.shopToolStripMenuItem.Click += new System.EventHandler(this.shopToolStripMenuItem_Click);
             // 
@@ -106,7 +106,7 @@
             this.logOutToolStripMenuItem,
             this.deleteAccountToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
@@ -339,39 +339,55 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.DarkViolet;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(461, 466);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(74, 40);
             this.button7.TabIndex = 20;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Text = "E0";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.DarkViolet;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(541, 466);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(74, 40);
             this.button8.TabIndex = 21;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Text = "S100";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.DarkViolet;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(621, 465);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(74, 40);
             this.button9.TabIndex = 22;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Text = "H100";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.DarkViolet;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Location = new System.Drawing.Point(701, 465);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(74, 40);
             this.button10.TabIndex = 23;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Text = "H0";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Form3
             // 

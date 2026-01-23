@@ -72,7 +72,6 @@ namespace LifeDash
             if (progressBar4.Value == 0)
             {
                 button1.Enabled = false;
-                button5.Enabled = false;
             }
         }
         
@@ -95,8 +94,6 @@ namespace LifeDash
             {
                 pictureBox1.Image = imageList1.Images[i]; // happy
             }
-            label7.Text = $"E:{energy} S:{stress} H:{happiness}";
-
         }
 
         void set() // sets values when button is pressed 
@@ -254,6 +251,57 @@ namespace LifeDash
             label6.Text = "Coins: " + coins.ToString();
         }
 
+        private void button7_Click(object sender, EventArgs e) // automatically sets energy on 0
+        {
+            energy = 0;
+            focus = 100;
+            stress = 0;
+            happiness = 100;
+
+            set();
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
+
+        private void button8_Click(object sender, EventArgs e) // automatically sets stress on 100
+        {
+            stress = 100;
+            energy = 100;
+            focus = 100;
+            happiness = 100;
+
+            set();
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
+
+        private void button9_Click(object sender, EventArgs e) // automatically sets happiness on 100
+        {
+            happiness = 100;
+            energy = 100;
+            focus = 100;
+            stress = 0;
+
+            set();
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
+
+        private void button10_Click(object sender, EventArgs e) // automatically sets happiness on 0
+        {
+            happiness = 0;
+            energy = 100;
+            focus = 100;
+            stress = 0;
+
+            set();
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
         private void dailyMissionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Missions missions = new Missions();
@@ -273,6 +321,7 @@ namespace LifeDash
             profile.Show();
             this.Hide();
         }
+
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StreamWriter sw = new StreamWriter("korisnik.txt");
