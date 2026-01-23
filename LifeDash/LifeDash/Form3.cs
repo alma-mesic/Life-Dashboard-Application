@@ -74,7 +74,6 @@ namespace LifeDash
             }
         }
         
-
         void state(int energy, int focus, int stress, int happiness, int i, int j, int k, int p) //seting photo by emotions
         {
             if (stress >= 75)
@@ -95,6 +94,18 @@ namespace LifeDash
             }
 
         }
+
+        void set(int energy, int focus, int stress, int happiness) // sets values when button is pressed 
+        {
+            energy = provjera(energy);
+            focus = provjera(focus);
+            stress = provjera(stress);
+            happiness = provjera(happiness);
+
+            state(energy, focus, stress, happiness, i, j, k, p);
+            progress(energy, focus, stress, happiness);
+        }
+
         private void dailyMissionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Missions missions = new Missions();
@@ -142,14 +153,40 @@ namespace LifeDash
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // train button
         {
+            MessageBox.Show("Training...", "Train", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
+            energy -= 40;
+            focus -= 10;
+            stress -= 15;
+            happiness += 25;
+
+            set(energy,focus,stress,happiness);
+
+            score += 25;
+            coins += 10;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // sleep button
         {
+            MessageBox.Show("Sleeping...", "Sleep", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
 
+            energy += 50;
+            focus -= 50;
+            stress -= 20;
+            happiness += 35;
+
+            set(energy, focus, stress, happiness);
+
+            score += 15;
+            coins += 5;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
         }
 
         private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,32 +209,74 @@ namespace LifeDash
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) // scroll tiktok button
+        {
+            MessageBox.Show("Scrolling tiktok...", "Scroll tiktok", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            
+            energy -= 15;
+            focus -= 25;
+            stress += 15;
+            happiness += 15;
+
+            set(energy, focus, stress, happiness);
+
+            score += 10;
+            coins += 0;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // eat button
         {
+            MessageBox.Show("Eating...", "Eat", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            
+            energy += 30;
+            focus += 20;
+            stress -= 10;
+            happiness += 25;
 
+            set(energy, focus, stress, happiness);
+
+            score += 25;
+            coins += 10;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e) //study
+        private void button6_Click(object sender, EventArgs e) // do nothing button
+        {
+            MessageBox.Show("Doing nothing for a while...", "Do nothing", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            energy += 20;
+            focus -= 5;
+            stress += 10;
+            happiness += 15;
+
+            set(energy, focus, stress, happiness);
+
+            score += 10;
+            coins += 3;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e) //study button
         {
             MessageBox.Show("Studying for upcoming test...","Study",MessageBoxButtons.OKCancel,MessageBoxIcon.Information);
 
-            /*energy -= 15;
+            energy -= 15;
             focus += 10;
             stress -= 10;
             happiness -= 15;
 
-            energy = provjera(energy);
-            focus = provjera(focus);
-            stress = provjera(stress);
-            happiness = provjera(happiness);*/
-            stress = 90;
-            state(energy, focus, stress, happiness, i, j, k, p);
-            progress(energy, focus, stress, happiness);
+            set(energy, focus, stress, happiness);
 
             score += 20;
             coins += 5;
