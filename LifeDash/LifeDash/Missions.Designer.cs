@@ -75,7 +75,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(304, 212);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 35);
+            this.button1.Size = new System.Drawing.Size(166, 35);
             this.button1.TabIndex = 16;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(304, 257);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 35);
+            this.button2.Size = new System.Drawing.Size(166, 35);
             this.button2.TabIndex = 17;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(304, 305);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 60);
+            this.button3.Size = new System.Drawing.Size(166, 60);
             this.button3.TabIndex = 18;
             this.button3.Text = "Sort by Alphabet";
             this.button3.UseVisualStyleBackColor = false;
@@ -197,7 +197,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(304, 371);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(144, 67);
+            this.button5.Size = new System.Drawing.Size(166, 67);
             this.button5.TabIndex = 27;
             this.button5.Text = "Sort by Priority";
             this.button5.UseVisualStyleBackColor = false;
@@ -207,7 +207,7 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(489, 154);
+            this.listBox2.Location = new System.Drawing.Point(504, 154);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(199, 228);
             this.listBox2.TabIndex = 28;
@@ -216,7 +216,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(485, 113);
+            this.label3.Location = new System.Drawing.Point(500, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 23);
             this.label3.TabIndex = 29;

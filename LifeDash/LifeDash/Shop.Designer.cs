@@ -118,6 +118,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Buy";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -131,6 +132,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Buy";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -144,6 +146,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "Buy";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -243,6 +246,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Shop";
             this.Text = "Shop";
+            this.Load += new System.EventHandler(this.Shop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

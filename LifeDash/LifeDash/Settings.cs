@@ -56,7 +56,7 @@ namespace LifeDash
 
             if(oldPass=="" || newPass == "" || username=="")
             {
-                MessageBox.Show("Unesite korisničko ime i novu lozinku!");
+                MessageBox.Show("Enter username, old password, and new password!");
                 return;
             }
 
@@ -100,11 +100,11 @@ namespace LifeDash
             sw.Close();
 
             if (changed)
-                MessageBox.Show("Lozinka uspješno promijenjena!");
+                MessageBox.Show("Password changed successfully!");
             else
             {
                 textBox1.ForeColor = Color.Red;
-                MessageBox.Show("Korisničko ime nije pronađeno!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

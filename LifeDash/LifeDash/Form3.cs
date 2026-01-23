@@ -18,7 +18,6 @@ namespace LifeDash
 {
     public partial class Form3 : Form
     {
-        private string avatar;
         public Form3(string avatar1) //konstruktor
         {
             InitializeComponent();
@@ -29,13 +28,16 @@ namespace LifeDash
             InitializeComponent();
         }
 
-        int score = 0;
-        int coins = 0;
+        public static int score = 0;
+        public static int coins = 0;
+        private string avatar;
 
-        int energy = 100;
-        int focus = 50;
+        public static int energy = 100;
+        public static int focus = 50;
+        public static int happiness = 75;
         int stress = 25;
-        int happiness = 75;
+
+        public const int maxi = 100;
 
         int i, j, k, p;
 
@@ -79,7 +81,7 @@ namespace LifeDash
             }
         }
         
-        void state() //seting photo by emotions
+        void state() //setting photo by emotions
         {
 
             if (energy <= 25)
@@ -327,13 +329,9 @@ namespace LifeDash
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StreamWriter sw = new StreamWriter("korisnik.txt");
-            sw.Write("score: " + score + "|coins: " + coins + "\n");
-            sw.Close();
-
             Form1 login = new Form1();
             login.ShowDialog();
-            this.Hide();
+            this.Close();
         }
         private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {

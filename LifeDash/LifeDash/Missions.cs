@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.PerformanceData;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,10 @@ namespace LifeDash
         {
             InitializeComponent();
         }
+
         string task = "",priority="";
 
-        private int setPriority(string task) // function for seting priority
+        private int setPriority(string task) // function for setting priority
         {
             if (task.EndsWith("[H]")) return 3;
             if (task.EndsWith("[M]")) return 2;
@@ -28,6 +30,9 @@ namespace LifeDash
         private void Missions_Load(object sender, EventArgs e)
         {
             radioButton3.Select(); //putting tasks on low priority list if user does not select otherwise
+            label5.Text = "Score: " + Form3.score.ToString();
+            label6.Text = "Coins: " + Form3.coins.ToString();
+
         }
 
         private void button1_Click(object sender, EventArgs e) //adding tasks in listbox1
@@ -96,7 +101,12 @@ namespace LifeDash
         {
             listBox2.Items.Add(listBox1.SelectedItem);
             listBox1.Items.Remove(listBox1.SelectedItem);
-            MessageBox.Show("You successfully compleated the task:\n"+task + "!", "Task completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("You successfully completed the task:\n"+task + "!", "Task completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Form3.coins += 30;
+            Form3.score += 50;
+
+            label5.Text = "Score: " + Form3.score.ToString();
+            label6.Text = "Coins: " + Form3.coins.ToString();
         }
 
         private void button7_Click(object sender, EventArgs e)
