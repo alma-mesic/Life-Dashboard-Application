@@ -19,10 +19,14 @@ namespace LifeDash
     public partial class Form3 : Form
     {
         private string avatar;
-        public Form3(string avatar1)
+        public Form3(string avatar1) //konstruktor
         {
             InitializeComponent();
             avatar = avatar1;
+        }
+        public Form3()
+        {
+            InitializeComponent();
         }
 
         int score = 0;
@@ -144,8 +148,7 @@ namespace LifeDash
 
             state();
         }
-        
-
+       
         private void button1_Click(object sender, EventArgs e) //study button
         {
             MessageBox.Show("Studying for upcoming test...","Study",MessageBoxButtons.OKCancel,MessageBoxIcon.Information);
