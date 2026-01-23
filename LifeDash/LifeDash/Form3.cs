@@ -87,18 +87,22 @@ namespace LifeDash
             if (energy <= 25)
             {
                 pictureBox1.Image = imageList1.Images[k]; // sleepy
+                label7.Text = "I´m so sleepy...";
             }
             else if (stress >= 70)
             {
                 pictureBox1.Image = imageList1.Images[j]; // stressed
+                label7.Text = "I´m stressed out";
             }
             else if (happiness <= 30)
             {
                 pictureBox1.Image = imageList1.Images[p]; // sad
+                label7.Text = "I´m so sad...";
             }
             else
             {
                 pictureBox1.Image = imageList1.Images[i]; // happy
+                label7.Text = "I´m happy!";
             }
         }
 
@@ -122,7 +126,7 @@ namespace LifeDash
                 k = 6;
                 p = 7;
             }
-            else if (Form1.avatar == "Teddy-bear" || Form2.avatar == "Koala")// 0 1 2 3
+            else if (Form1.avatar == "Teddy-bear" || Form2.avatar == "Teddy-bear")// 0 1 2 3
             {
                 pictureBox1.Image = imageList1.Images[0];
                 i = 0;
@@ -130,7 +134,7 @@ namespace LifeDash
                 k = 2;
                 p = 3;
             }
-            else if (Form1.avatar == "Bunny" || Form2.avatar == "Koala") // 8 9 10 11
+            else if (Form1.avatar == "Bunny" || Form2.avatar == "Bunny") // 8 9 10 11
             {
                 pictureBox1.Image = imageList1.Images[8];
                 i = 8;
