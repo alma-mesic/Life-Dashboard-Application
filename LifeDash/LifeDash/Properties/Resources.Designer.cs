@@ -73,6 +73,16 @@ namespace LifeDash.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dollar {
+            get {
+                object obj = ResourceManager.GetObject("dollar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
@@ -196,6 +206,16 @@ namespace LifeDash.Properties {
         internal static System.Drawing.Bitmap rabbit_tired {
             get {
                 object obj = ResourceManager.GetObject("rabbit-tired", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap speedometer__1_ {
+            get {
+                object obj = ResourceManager.GetObject("speedometer (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

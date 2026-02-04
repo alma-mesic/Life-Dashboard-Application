@@ -26,6 +26,8 @@ namespace LifeDash
         public Form3()
         {
             InitializeComponent();
+            this.Size = new Size(1100, 600);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public static int score = 0;
@@ -54,6 +56,7 @@ namespace LifeDash
             progressBar2.Value = focus;
             progressBar3.Value = stress;
             progressBar4.Value = happiness;
+
 
             button1.Enabled = true;
             button2.Enabled = true;
@@ -87,22 +90,22 @@ namespace LifeDash
             if (energy <= 25)
             {
                 pictureBox1.Image = imageList1.Images[k]; // sleepy
-                label7.Text = "I´m so sleepy...";
+                toolStripStatusLabel1.Text = "I´m so sleepy...";
             }
             else if (stress >= 70)
             {
                 pictureBox1.Image = imageList1.Images[j]; // stressed
-                label7.Text = "I´m stressed out";
+                toolStripStatusLabel1.Text = "I´m stressed out";
             }
             else if (happiness <= 30)
             {
                 pictureBox1.Image = imageList1.Images[p]; // sad
-                label7.Text = "I´m so sad...";
+                toolStripStatusLabel1.Text = "I´m so sad...";
             }
             else
             {
                 pictureBox1.Image = imageList1.Images[i]; // happy
-                label7.Text = "I´m happy!";
+                toolStripStatusLabel1.Text = "I´m happy!";
             }
         }
 
@@ -118,6 +121,18 @@ namespace LifeDash
         }
         private void Form3_Load(object sender, EventArgs e)
         {
+            panel1.BackColor = Color.FromArgb(100, 255, 255, 255);
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            label4.BackColor = Color.Transparent;
+            label5.BackColor = Color.Transparent;
+            label6.BackColor = Color.Transparent;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox4.BackColor = Color.Transparent;
+
             if (Form1.avatar == "Koala" || Form2.avatar == "Koala")// 4 5 6 7
             {
                 pictureBox1.Image = imageList1.Images[4];
@@ -329,6 +344,16 @@ namespace LifeDash
             Settings profile = new Settings();
             profile.Show();
             this.Hide();
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
