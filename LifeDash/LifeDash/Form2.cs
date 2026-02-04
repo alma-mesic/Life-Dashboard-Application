@@ -16,6 +16,8 @@ namespace LifeDash
         public Form2()
         {
             InitializeComponent();
+            this.Size = new Size(1100, 600);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         public static string avatar = "";
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -34,6 +36,21 @@ namespace LifeDash
         private void Form2_Load(object sender, EventArgs e)
         {
             textBox2.UseSystemPasswordChar = true;
+            panel1.BackColor = Color.FromArgb(100, 255, 255, 255);
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            label4.BackColor = Color.Transparent;
+            label5.BackColor = Color.Transparent;
+            label6.BackColor = Color.Transparent;
+            radioButton1.BackColor = Color.Transparent;
+            radioButton2.BackColor = Color.Transparent;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox2.BackColor = Color.Transparent;
+
+            textBox1.BackColor = Color.FromArgb(240, 240, 240);
+
+            textBox2.BackColor = Color.FromArgb(240, 240, 240);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -84,6 +101,11 @@ namespace LifeDash
                 this.Hide();
 
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
