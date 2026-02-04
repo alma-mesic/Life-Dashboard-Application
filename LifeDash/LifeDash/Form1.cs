@@ -18,6 +18,8 @@ namespace LifeDash
         public Form1()
         {
             InitializeComponent();
+            this.Size = new Size(1100, 600);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public static string avatar = "";
@@ -45,6 +47,8 @@ namespace LifeDash
             textBox1.BackColor = Color.FromArgb(240, 240, 240);
 
             textBox2.BackColor = Color.FromArgb(240, 240, 240);
+            
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -102,6 +106,11 @@ namespace LifeDash
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
