@@ -170,5 +170,14 @@
   <ItemGroup>
     <None Include="Resources\teddy-bear-tired.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default-avatar-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient-background-1920x1080-11027.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

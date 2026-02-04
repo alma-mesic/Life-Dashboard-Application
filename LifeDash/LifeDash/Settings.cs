@@ -83,11 +83,7 @@ namespace LifeDash
                         textBox1.ForeColor = Color.Green;
                     }
 
-                    line = parts[0] + "|" + newPass;
-                    for (int i = 2; i < parts.Length; i++)
-                    {
-                        line += "|" + parts[i];
-                    }
+                    line = string.Join("|", parts);
                 }
 
                 fileContent += line + "\n";
