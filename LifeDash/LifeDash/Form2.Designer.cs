@@ -54,19 +54,19 @@
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(131, 330);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 25);
+            this.textBox2.Size = new System.Drawing.Size(244, 27);
             this.textBox2.TabIndex = 15;
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(131, 177);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 25);
+            this.textBox1.Size = new System.Drawing.Size(244, 27);
             this.textBox1.TabIndex = 14;
             // 
             // checkBox1
@@ -145,11 +145,11 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(131, 215);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(244, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(244, 27);
             this.dateTimePicker1.TabIndex = 20;
             // 
             // radioButton1
@@ -198,7 +198,7 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Teddy-bear",
@@ -206,7 +206,7 @@
             "Bunny"});
             this.comboBox1.Location = new System.Drawing.Point(131, 290);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 25);
+            this.comboBox1.Size = new System.Drawing.Size(244, 28);
             this.comboBox1.TabIndex = 25;
             // 
             // label6

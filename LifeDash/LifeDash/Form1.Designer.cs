@@ -123,19 +123,19 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(46, 196);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 25);
+            this.textBox1.Size = new System.Drawing.Size(244, 27);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(46, 261);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 25);
+            this.textBox2.Size = new System.Drawing.Size(244, 27);
             this.textBox2.TabIndex = 7;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 

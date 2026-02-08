@@ -13,6 +13,7 @@ using System.Security.Permissions;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Drawing.Drawing2D;
 
 namespace LifeDash
 {
@@ -26,7 +27,6 @@ namespace LifeDash
         public Form3()
         {
             InitializeComponent();
-            this.Size = new Size(1100, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -42,6 +42,18 @@ namespace LifeDash
         public const int maxi = 100;
 
         int i, j, k, p;
+
+        private void SetRoundCorners(Control c, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(c.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(c.Width - radius, c.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, c.Height - radius, radius, radius, 90, 90);
+
+            c.Region = new Region(path);
+        }
 
         int provjera (int value) //making sure the values dont go over the limit
         {
@@ -121,7 +133,11 @@ namespace LifeDash
         }
         private void Form3_Load(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.FromArgb(100, 255, 255, 255);
+            SetRoundCorners(panel1, 30);
+            SetRoundCorners(panel2, 30);
+
+            panel1.BackColor = Color.FromArgb(130, 255, 255, 255);
+            panel2.BackColor = Color.FromArgb(130, 255, 255, 255);
             label1.BackColor = Color.Transparent;
             label2.BackColor = Color.Transparent;
             label3.BackColor = Color.Transparent;
@@ -131,7 +147,7 @@ namespace LifeDash
             pictureBox1.BackColor = Color.Transparent;
             pictureBox2.BackColor = Color.Transparent;
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox4.BackColor = Color.Transparent;
+            pictureBox5.BackColor = Color.Transparent;
 
             if (Form1.avatar == "Koala" || Form2.avatar == "Koala")// 4 5 6 7
             {
@@ -356,6 +372,132 @@ namespace LifeDash
             Application.Exit();
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if(comboBox1.SelectedItem.ToString() == "All")
+            {
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
+                button4.Visible = true;
+                button5.Visible = true;
+                button6.Visible = true;
+                button7.Visible = true;
+                button8.Visible = true;
+                button9.Visible = true;
+                button10.Visible = true;
+                button11.Visible = true;
+                button12.Visible = true;
+            }
+            else if(comboBox1.SelectedItem.ToString() == "Productive")
+            {
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = false;
+                button4.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                button7.Visible = false;
+                button8.Visible = false;
+                button9.Visible = false;
+                button10.Visible = false;
+                button11.Visible = false;
+                button12.Visible = true;
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Waste Time")
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
+                button5.Visible = true;
+                button6.Visible = true;
+                button7.Visible = false;
+                button8.Visible = false;
+                button9.Visible = false;
+                button10.Visible = false;
+                button11.Visible = false;
+                button12.Visible = false;
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Relax")
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = true;
+                button4.Visible = true;
+                button5.Visible = true;
+                button6.Visible = true;
+                button7.Visible = false;
+                button8.Visible = false;
+                button9.Visible = false;
+                button10.Visible = false;
+                button1.Visible = true;
+                button2.Visible = false;
+            }
+            else if (comboBox1.SelectedItem.ToString() == "System")
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                button7.Visible = true;
+                button8.Visible = true;
+                button9.Visible = true;
+                button10.Visible = true;
+                button1.Visible = true;
+                button2.Visible = true;
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hanging out with friends...", "Socialize", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            energy -= 10;
+            focus -= 10;
+            stress -= 20;
+            happiness += 25;
+
+            set();
+
+            score += 15;
+            coins += 8;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cleaning and organizing...", "Organize", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            energy -= 15;
+            focus += 10;
+            stress -= 20;
+            happiness += 10;
+
+            set();
+
+            score += 20;
+            coins += 6;
+
+            label5.Text = "Score: " + score.ToString();
+            label6.Text = "Coins: " + coins.ToString();
+        }
+
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form1 login = new Form1();
@@ -364,7 +506,7 @@ namespace LifeDash
         }
         private void deleteAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
             
         }
 

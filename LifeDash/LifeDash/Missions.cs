@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.PerformanceData;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +18,7 @@ namespace LifeDash
         public Missions()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         string task = "",priority="";
@@ -26,12 +29,35 @@ namespace LifeDash
             if (task.EndsWith("[M]")) return 2;
             return 1; 
         }
+        private void SetRoundCorners(Control c, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(c.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(c.Width - radius, c.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, c.Height - radius, radius, radius, 90, 90);
+
+            c.Region = new Region(path);
+        }
 
         private void Missions_Load(object sender, EventArgs e)
         {
             radioButton3.Select(); //putting tasks on low priority list if user does not select otherwise
             label5.Text = "Score: " + Form3.score.ToString();
             label6.Text = "Coins: " + Form3.coins.ToString();
+
+            SetRoundCorners(panel1, 30);
+            SetRoundCorners(panel2, 30);
+
+            panel1.BackColor = Color.FromArgb(130, 255, 255, 255);
+            panel2.BackColor = Color.FromArgb(130, 255, 255, 255);
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            radioButton1.BackColor = Color.Transparent;
+            radioButton2.BackColor = Color.Transparent;
+            radioButton3.BackColor = Color.Transparent;
 
         }
 

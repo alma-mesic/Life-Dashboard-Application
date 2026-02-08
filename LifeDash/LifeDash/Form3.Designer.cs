@@ -54,25 +54,32 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -159,11 +166,12 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(629, 16);
+            this.label6.Location = new System.Drawing.Point(48, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 31);
             this.label6.TabIndex = 11;
             this.label6.Text = "Coins: ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // button1
             // 
@@ -174,7 +182,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(763, 197);
+            this.button1.Location = new System.Drawing.Point(44, 208);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 48);
             this.button1.TabIndex = 12;
@@ -191,7 +199,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(763, 260);
+            this.button2.Location = new System.Drawing.Point(44, 300);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(150, 48);
             this.button2.TabIndex = 13;
@@ -208,7 +216,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(763, 328);
+            this.button3.Location = new System.Drawing.Point(45, 388);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 48);
             this.button3.TabIndex = 14;
@@ -225,7 +233,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(927, 197);
+            this.button4.Location = new System.Drawing.Point(240, 388);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 48);
             this.button4.TabIndex = 15;
@@ -242,7 +250,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(927, 260);
+            this.button5.Location = new System.Drawing.Point(240, 208);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(150, 48);
             this.button5.TabIndex = 16;
@@ -259,7 +267,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(927, 330);
+            this.button6.Location = new System.Drawing.Point(240, 300);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(150, 48);
             this.button6.TabIndex = 17;
@@ -293,9 +301,9 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(763, 383);
+            this.button7.Location = new System.Drawing.Point(130, 126);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(74, 40);
+            this.button7.Size = new System.Drawing.Size(85, 48);
             this.button7.TabIndex = 20;
             this.button7.Text = "E0";
             this.button7.UseVisualStyleBackColor = false;
@@ -310,9 +318,9 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(843, 383);
+            this.button8.Location = new System.Drawing.Point(225, 126);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(74, 40);
+            this.button8.Size = new System.Drawing.Size(85, 48);
             this.button8.TabIndex = 21;
             this.button8.Text = "S100";
             this.button8.UseVisualStyleBackColor = false;
@@ -327,9 +335,9 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(923, 382);
+            this.button9.Location = new System.Drawing.Point(316, 126);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(74, 40);
+            this.button9.Size = new System.Drawing.Size(85, 48);
             this.button9.TabIndex = 22;
             this.button9.Text = "H100";
             this.button9.UseVisualStyleBackColor = false;
@@ -344,9 +352,9 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(1003, 382);
+            this.button10.Location = new System.Drawing.Point(39, 126);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(74, 40);
+            this.button10.Size = new System.Drawing.Size(85, 48);
             this.button10.TabIndex = 23;
             this.button10.Text = "H0";
             this.button10.UseVisualStyleBackColor = false;
@@ -371,34 +379,44 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.progressBar2);
             this.panel1.Controls.Add(this.progressBar4);
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.progressBar3);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(39, 71);
+            this.panel1.Location = new System.Drawing.Point(148, 67);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1259, 598);
+            this.panel1.Size = new System.Drawing.Size(433, 603);
             this.panel1.TabIndex = 25;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::LifeDash.Properties.Resources.exit;
+            this.pictureBox4.Location = new System.Drawing.Point(1212, 23);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(102, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 207);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -413,53 +431,21 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::LifeDash.Properties.Resources.dollar;
-            this.pictureBox2.Location = new System.Drawing.Point(593, 18);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox4
+            // progressBar1
             // 
-            this.pictureBox4.Image = global::LifeDash.Properties.Resources.exit;
-            this.pictureBox4.Location = new System.Drawing.Point(1212, 23);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 504);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Happiness";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 437);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Stress";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 368);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Focus";
+            this.progressBar1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.progressBar1.Location = new System.Drawing.Point(44, 321);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(339, 27);
+            this.progressBar1.TabIndex = 2;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // label1
             // 
@@ -471,19 +457,15 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Energy";
             // 
-            // progressBar4
+            // label2
             // 
-            this.progressBar4.Location = new System.Drawing.Point(45, 539);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(339, 27);
-            this.progressBar4.TabIndex = 5;
-            // 
-            // progressBar3
-            // 
-            this.progressBar3.Location = new System.Drawing.Point(44, 465);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(339, 27);
-            this.progressBar3.TabIndex = 4;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 368);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Focus";
             // 
             // progressBar2
             // 
@@ -492,25 +474,122 @@
             this.progressBar2.Size = new System.Drawing.Size(339, 27);
             this.progressBar2.TabIndex = 3;
             // 
-            // progressBar1
+            // progressBar4
             // 
-            this.progressBar1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.progressBar1.Location = new System.Drawing.Point(44, 321);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(339, 27);
-            this.progressBar1.TabIndex = 2;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            this.progressBar4.Location = new System.Drawing.Point(45, 539);
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.Size = new System.Drawing.Size(339, 27);
+            this.progressBar4.TabIndex = 5;
             // 
-            // pictureBox1
+            // label3
             // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(89, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 207);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(41, 437);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Stress";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 504);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Happiness";
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(44, 465);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(339, 27);
+            this.progressBar3.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button12);
+            this.panel2.Controls.Add(this.button11);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.button10);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(767, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(433, 600);
+            this.panel2.TabIndex = 19;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::LifeDash.Properties.Resources.exit;
+            this.pictureBox5.Location = new System.Drawing.Point(386, 13);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "All",
+            "Productive",
+            "Waste Time",
+            "Relax",
+            "System"});
+            this.comboBox1.Location = new System.Drawing.Point(44, 61);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(346, 24);
+            this.comboBox1.TabIndex = 27;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(99)))), ((int)(((byte)(255)))));
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(45, 484);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(150, 48);
+            this.button11.TabIndex = 28;
+            this.button11.Text = "Socialize";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(99)))), ((int)(((byte)(255)))));
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.Location = new System.Drawing.Point(240, 484);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(150, 48);
+            this.button12.TabIndex = 29;
+            this.button12.Text = "Clean Room";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Form3
             // 
@@ -520,6 +599,7 @@
             this.BackgroundImage = global::LifeDash.Properties.Resources.gradient_background_1920x1080_11027;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1337, 730);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -534,10 +614,13 @@
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,5 +664,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
     }
 }
