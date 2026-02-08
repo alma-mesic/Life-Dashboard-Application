@@ -36,6 +36,8 @@ namespace LifeDash
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Form3.SetRoundCorners(panel1, 30);
+
             textBox2.UseSystemPasswordChar = true;
             panel1.BackColor = Color.FromArgb(100, 255, 255, 255);
             label1.BackColor = Color.Transparent;

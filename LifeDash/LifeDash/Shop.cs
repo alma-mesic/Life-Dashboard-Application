@@ -24,9 +24,9 @@ namespace LifeDash
             Form3.SetRoundCorners(panel1, 30);
             Form3.SetRoundCorners(panel2, 30);
             Form3.SetRoundCorners(panel3, 30);
-            Form3.SetRoundCorners(richTextBox1, 30);
-            Form3.SetRoundCorners(richTextBox2, 30);
-            Form3.SetRoundCorners(richTextBox3, 30);
+            Form3.SetRoundCorners(richTextBox1, 20);
+            Form3.SetRoundCorners(richTextBox2, 20);
+            Form3.SetRoundCorners(richTextBox3, 20);
             this.StartPosition = FormStartPosition.CenterScreen;
             panel1.BackColor = Color.FromArgb(130, 255, 255, 255);
             panel2.BackColor = Color.FromArgb(130, 255, 255, 255);
@@ -138,6 +138,21 @@ namespace LifeDash
 
             label8.Text = "Score: " + Form3.score.ToString();
             label4.Text = "Coins: " + Form3.coins.ToString();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

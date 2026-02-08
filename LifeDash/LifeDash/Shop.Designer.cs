@@ -298,6 +298,7 @@
             this.richTextBox3.TabIndex = 13;
             this.richTextBox3.Text = "Track tasks that develop discipline, productivity, and consistent progress. Habit" +
     "s that strengthen discipline and productivity.";
+            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
             // 
             // panel2
             // 
@@ -324,6 +325,7 @@
             this.richTextBox2.TabIndex = 12;
             this.richTextBox2.Text = "Track habits that strengthen your body and energy. Every completed task contribut" +
     "es to long-term physical stability and discipline.";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // panel3
             // 
@@ -350,6 +352,7 @@
             this.richTextBox1.TabIndex = 11;
             this.richTextBox1.Text = "Tasks designed for emotional well-being. Progress here represents enjoyment, crea" +
     "tivity, and personal satisfaction.";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // pictureBox4
             // 

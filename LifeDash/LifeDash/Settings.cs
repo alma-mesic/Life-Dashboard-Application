@@ -20,8 +20,18 @@ namespace LifeDash
 
         private void Settings_Load(object sender, EventArgs e)
         {
+            Form3.SetRoundCorners(panel1, 30);
+
+            textBox2.UseSystemPasswordChar = true;
             textBox3.UseSystemPasswordChar = true;
             textBox2.UseSystemPasswordChar = true;
+            textBox2.UseSystemPasswordChar = true;
+            panel1.BackColor = Color.FromArgb(100, 255, 255, 255);
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            label4.BackColor = Color.Transparent;
+            checkBox1.BackColor = Color.Transparent;
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
