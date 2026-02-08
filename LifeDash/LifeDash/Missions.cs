@@ -29,17 +29,7 @@ namespace LifeDash
             if (task.EndsWith("[M]")) return 2;
             return 1; 
         }
-        private void SetRoundCorners(Control c, int radius)
-        {
-            GraphicsPath path = new GraphicsPath();
-
-            path.AddArc(0, 0, radius, radius, 180, 90);
-            path.AddArc(c.Width - radius, 0, radius, radius, 270, 90);
-            path.AddArc(c.Width - radius, c.Height - radius, radius, radius, 0, 90);
-            path.AddArc(0, c.Height - radius, radius, radius, 90, 90);
-
-            c.Region = new Region(path);
-        }
+        
 
         private void Missions_Load(object sender, EventArgs e)
         {
@@ -47,18 +37,21 @@ namespace LifeDash
             label5.Text = "Score: " + Form3.score.ToString();
             label6.Text = "Coins: " + Form3.coins.ToString();
 
-            SetRoundCorners(panel1, 30);
-            SetRoundCorners(panel2, 30);
+            Form3.SetRoundCorners(panel1, 30);
+            Form3.SetRoundCorners(panel2, 30);
 
             panel1.BackColor = Color.FromArgb(130, 255, 255, 255);
             panel2.BackColor = Color.FromArgb(130, 255, 255, 255);
             label1.BackColor = Color.Transparent;
             label2.BackColor = Color.Transparent;
             label3.BackColor = Color.Transparent;
+            label5.BackColor = Color.Transparent;
+            label6.BackColor = Color.Transparent;
             radioButton1.BackColor = Color.Transparent;
             radioButton2.BackColor = Color.Transparent;
             radioButton3.BackColor = Color.Transparent;
-
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox3.BackColor = Color.Transparent;
         }
 
         private void button1_Click(object sender, EventArgs e) //adding tasks in listbox1

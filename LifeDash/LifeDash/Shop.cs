@@ -20,7 +20,42 @@ namespace LifeDash
         {
             label8.Text = "Score: " + Form3.score.ToString();
             label4.Text = "Coins: " + Form3.coins.ToString();
+
+            Form3.SetRoundCorners(panel1, 30);
+            Form3.SetRoundCorners(panel2, 30);
+            Form3.SetRoundCorners(panel3, 30);
+            Form3.SetRoundCorners(richTextBox1, 30);
+            Form3.SetRoundCorners(richTextBox2, 30);
+            Form3.SetRoundCorners(richTextBox3, 30);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            panel1.BackColor = Color.FromArgb(130, 255, 255, 255);
+            panel2.BackColor = Color.FromArgb(130, 255, 255, 255);
+            panel3.BackColor = Color.FromArgb(130, 255, 255, 255);
+            label1.BackColor = Color.Transparent;
+            label2.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            label4.BackColor = Color.Transparent;
+            label5.BackColor = Color.Transparent;
+            label6.BackColor = Color.Transparent;
+            label7.BackColor = Color.Transparent;
+            label8.BackColor = Color.Transparent;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox4.BackColor = Color.Transparent;
+            
+            richTextBox1.SelectAll();
+            richTextBox2.SelectAll();
+            richTextBox3.SelectAll();
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox2.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox3.SelectionAlignment = HorizontalAlignment.Center;
+            richTextBox1.DeselectAll();
+            richTextBox2.DeselectAll();
+            richTextBox3.DeselectAll();
         }
+
         private void button4_Click(object sender, EventArgs e) //go back button
         {
             Form3 home = new Form3();

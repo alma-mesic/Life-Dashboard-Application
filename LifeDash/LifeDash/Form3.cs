@@ -43,7 +43,7 @@ namespace LifeDash
 
         int i, j, k, p;
 
-        private void SetRoundCorners(Control c, int radius)
+        public static void SetRoundCorners(Control c, int radius)
         {
             GraphicsPath path = new GraphicsPath();
 
@@ -442,8 +442,8 @@ namespace LifeDash
                 button8.Visible = false;
                 button9.Visible = false;
                 button10.Visible = false;
-                button1.Visible = true;
-                button2.Visible = false;
+                button11.Visible = true;
+                button12.Visible = false;
             }
             else if (comboBox1.SelectedItem.ToString() == "System")
             {
@@ -457,8 +457,8 @@ namespace LifeDash
                 button8.Visible = true;
                 button9.Visible = true;
                 button10.Visible = true;
-                button1.Visible = true;
-                button2.Visible = true;
+                button11.Visible = true;
+                button12.Visible = true;
             }
         }
 
