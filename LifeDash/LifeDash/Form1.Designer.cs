@@ -53,7 +53,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(110, 312);
+            this.button1.Location = new System.Drawing.Point(110, 335);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 42);
             this.button1.TabIndex = 0;
@@ -113,10 +113,11 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(296, 264);
+            this.checkBox1.Location = new System.Drawing.Point(46, 294);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.Size = new System.Drawing.Size(139, 22);
             this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

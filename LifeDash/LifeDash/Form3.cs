@@ -457,8 +457,8 @@ namespace LifeDash
                 button8.Visible = true;
                 button9.Visible = true;
                 button10.Visible = true;
-                button11.Visible = true;
-                button12.Visible = true;
+                button11.Visible = false;
+                button12.Visible = false;
             }
         }
 

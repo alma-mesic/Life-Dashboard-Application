@@ -106,7 +106,7 @@ namespace LifeDash
             sw.Close();
 
             if (changed)
-                MessageBox.Show("Password changed successfully!");
+                MessageBox.Show("Password changed successfully!", "Password Changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 textBox1.ForeColor = Color.Red;
@@ -116,6 +116,11 @@ namespace LifeDash
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

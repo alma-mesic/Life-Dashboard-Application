@@ -76,7 +76,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(68, 143);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(245, 31);
@@ -86,7 +86,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
             this.textBox2.Location = new System.Drawing.Point(68, 235);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(245, 31);
@@ -147,11 +147,12 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
             this.textBox3.Location = new System.Drawing.Point(68, 320);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(245, 31);
             this.textBox3.TabIndex = 26;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label1
             // 
@@ -192,7 +193,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(522, 118);
+            this.panel1.Location = new System.Drawing.Point(496, 114);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(390, 569);
             this.panel1.TabIndex = 29;

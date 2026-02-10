@@ -72,7 +72,7 @@ namespace LifeDash
             }
             else
             {
-                MessageBox.Show("Please select an avatar!");
+                MessageBox.Show("Please select an avatar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             string gen = "";

@@ -45,6 +45,7 @@ namespace LifeDash
             label3.BackColor = Color.Transparent;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox2.BackColor = Color.Transparent;
+            checkBox1.BackColor = Color.Transparent;
 
             textBox1.BackColor = Color.FromArgb(240, 240, 240);
 
@@ -96,7 +97,7 @@ namespace LifeDash
                 }
                 else
                 {
-                    MessageBox.Show("Wrong username or password");
+                    MessageBox.Show("Wrong username or password","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
  
